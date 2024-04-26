@@ -41,15 +41,16 @@ import Shoe1 from '../src/assets/shoe1.jpg';
 import Shoe2 from '../src/assets/shoe2.jpg';
 import Shoe3 from '../src/assets/shoe3.jpg';
 import Shoe4 from '../src/assets/shoe4.jpg';
+import {Link} from 'react-router-dom'
 
 const Home = () => {
     const CartItems = useSelector(state => state.cart);
-    console.log(CartItems, 'carditems')
+    console.log(CartItems['items'].length, 'carditems')
   return (
     <div className='w-100 d-flex flex-column'>
         <div className='d-flex justify-content-between px-4 bg-dark text-white align-items-center h-12'>
             <h2>Code</h2>
-            <h4>Cart <small>{CartItems.length}</small></h4>
+            <Link to="/checkout"><h4>Cart <small>{CartItems['items']?.length}</small></h4></Link>
         </div>
         <div className='container d-flex flex-wrap mt-5'>
             <div className='border w-72'></div>
