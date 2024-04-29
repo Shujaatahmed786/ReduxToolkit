@@ -55,16 +55,19 @@ const Home = () => {
         <div className='container d-flex flex-wrap mt-5'>
             <div className='border w-72'></div>
             <Product 
+            id='1'
             title='Summers SALE up to 50% OFF what are you wating for'
             image={Shoe1}>
 
             </Product>
             <Product 
+            id='2'
             title='AUTUMN is coming, choose what suits you THE BEST'
             image={Shoe2}>
 
             </Product>
             <Product 
+            id='3'
             title='Make your feet as comfortable as walking on the beach'
             image={Shoe3}>
 

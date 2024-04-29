@@ -9,13 +9,12 @@ const Checkout = () => {
 
     return (
         <div>
-            <h2>Checkout</h2>
             <div>
                 {cartItems?.items?.map((item) => (
                     <div className='flex flex-col items-center justify-center '>
-                        <img src={item.payload.image} alt={item.payload.title} className='w-32 h-32' />
+                        <img src={item?.image} alt={item.title} className='w-32 h-32' />
                         <div>
-                            <h4>{item.payload.title}</h4>
+                            <h4>{item.title}</h4>
                             <button onClick={()=>dispatch(RemoveFromCart({id: item.id}))} className='bg-yellow-500 text-white p-2 rounded-lg'>Remove</button>
                         </div>
                     </div>
